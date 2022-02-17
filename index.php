@@ -9,11 +9,9 @@ $form = get_field("formulaire");
 	?>
 
 	<main>
-		<div>
-			<?php
-			echo $form;
-			?>
-		</div>
+		<?php
+		echo $form;
+		?>
 	</main>
 
 	<?php
