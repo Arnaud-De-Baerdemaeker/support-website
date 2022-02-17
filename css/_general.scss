@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	margin: 0;
+	font: {
+		family: "Catamaran", Arial, "Helvetica Neue", Helvetica, sans-serif;
+		size: 16px;
+	}
+	background-color: $grey-background;
+	overflow-x: hidden;
+
+	main {
+		background-color: $grey-background;
+	}
+}
