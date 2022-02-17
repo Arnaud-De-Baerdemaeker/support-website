@@ -5,7 +5,7 @@ $hero = get_field("hero");
 <div
 	id="hero"
 	<?php
-	if ($hero["arriere-plan"]):
+	if (!empty($hero["arriere-plan"])):
 	?>
 		style="background-image: url('<?php echo $hero["arriere-plan"]; ?>');"
 	<?php
@@ -18,7 +18,7 @@ $hero = get_field("hero");
 	?>
 	<section class="introduction <?php if ($hero["effet_degrade"]) {echo "gradient";} ?>">
 		<?php
-		if ($hero["logo"]):
+		if (!empty($hero["logo"])):
 		?>
 			<a href="#top" class="introduction__logo-link">
 				<h1 class="introduction__logo-container">
@@ -29,9 +29,11 @@ $hero = get_field("hero");
 		endif;
 		?>
 
-        <div>
+		<div class="introduction__description">
 			<?php
-			echo $description;
+			if (!empty($hero["description"])):
+				echo $hero["description"];
+			endif;
 			?>
 		</div>
 	</section>
