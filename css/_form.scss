@@ -1,0 +1,21 @@
+.wpcf7 { // <div>
+    max-width: 120rem;
+	margin: {
+		right: auto;
+		left: auto;
+	}
+	padding-bottom: 9.375rem;
+	scroll-margin-top: calc(3.125rem + 1.5625rem);
+
+	@media #{$mq_w450_up} {
+		scroll-margin-top: calc(3.75rem + 1.5625rem);
+	}
+
+	@media #{$mq_w800_up} {
+		scroll-margin-top: calc(4.6875rem + 1.5625rem);
+	}
+
+    p {
+        margin: 0;
+    }
+}
