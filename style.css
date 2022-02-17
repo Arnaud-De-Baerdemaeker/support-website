@@ -10,6 +10,403 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wooopsagency
 Tags: SCSS
 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Catamaran", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #dbdbdb;
+  overflow-x: hidden;
+}
+
+body main {
+  background-color: #dbdbdb;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.hero .introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 300px;
+          column-gap: 300px;
+  position: relative;
+  width: 100%;
+}
+
+.hero .introduction__logo-link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hero .introduction__logo-container {
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
+  z-index: 0;
+}
+
+@media (orientation: portrait) {
+  .hero .introduction__logo-container {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .hero .introduction__logo-container {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero .introduction__logo-container {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .hero .introduction__logo-container {
+    width: 13.75rem;
+    height: 13.75rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .hero .introduction__logo-container {
+    width: 15.625rem;
+    height: 15.625rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .hero .introduction__logo-container {
+    width: 16.875rem;
+    height: 16.875rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero .introduction__logo-container {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero .introduction__logo-container {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero .introduction__logo-container {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero .introduction__logo-container {
+    width: 10.625rem;
+    height: 10.625rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero .introduction__logo-container {
+    width: 11.875rem;
+    height: 11.875rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero .introduction__logo-container {
+    width: 13.75rem;
+    height: 13.75rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .hero .introduction__logo-container {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .hero .introduction__logo-container {
+    width: 16.25rem;
+    height: 16.25rem;
+  }
+}
+
+.hero .introduction__logo-image {
+  vertical-align: middle;
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.hero .introduction__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 100px;
+  width: 40%;
+}
+
+.hero .introduction__description p {
+  text-align: end;
+  margin: 0;
+  color: white;
+  font-weight: 100;
+  line-height: 60px;
+  z-index: 1;
+}
+
+@media (orientation: portrait) {
+  .hero .introduction__description p {
+    font-size: 1.375rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .hero .introduction__description p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .hero .introduction__description p {
+    font-size: 1.8125rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero .introduction__description p {
+    font-size: 2.125rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .hero .introduction__description p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .hero .introduction__description p {
+    font-size: 2.8125rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .hero .introduction__description p {
+    font-size: 3.125rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero .introduction__description p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero .introduction__description p {
+    font-size: 1.375rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero .introduction__description p {
+    font-size: 1.625rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero .introduction__description p {
+    font-size: 1.875rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero .introduction__description p {
+    font-size: 2.1875rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero .introduction__description p {
+    font-size: 2.8125rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .hero .introduction__description p {
+    font-size: 3.125rem;
+  }
+}
+
+.hero .gradient {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.introduction__logo-link--smaller {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.introduction__logo-container--smaller {
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  position: relative;
+}
+
+@media (orientation: portrait) {
+  .introduction__logo-container--smaller {
+    width: 5.625rem;
+    height: 5.625rem;
+    top: 0.3125rem;
+    left: calc(100% / 2 - 5.625rem / 2);
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .introduction__logo-container--smaller {
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 0.625rem;
+    left: calc(100% / 2 - 6.25rem / 2);
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .introduction__logo-container--smaller {
+    width: 8.125rem;
+    height: 8.125rem;
+    top: 2.3125rem;
+    left: calc(100% / 2 - 8.125rem / 2);
+  }
+}
+
+@media (orientation: landscape) {
+  .introduction__logo-container--smaller {
+    width: 5.625rem;
+    height: 5.625rem;
+    top: -0.3125rem;
+    left: calc(100% / 2 - 5.625rem / 2);
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .introduction__logo-container--smaller {
+    top: 0.3125rem;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .introduction__logo-container--smaller {
+    width: 6.875rem;
+    height: 6.875rem;
+    top: 1.875rem;
+    left: calc(100% / 2 - 6.875rem / 2);
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .introduction__logo-container--smaller {
+    width: 8.125rem;
+    height: 8.125rem;
+    top: 2.3125rem;
+    left: calc(100% / 2 - 8.125rem / 2);
+  }
+}
+
+.introduction__logo-image--smaller {
+  vertical-align: middle;
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .footer {
   background-color: #323232;
   color: white;
@@ -157,4 +554,28 @@ Tags: SCSS
     padding-right: 12%;
     padding-left: 12%;
   }
+}
+
+.wpcf7 {
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 9.375rem;
+  scroll-margin-top: calc(3.125rem + 1.5625rem);
+}
+
+@media (min-width: 28.125rem) {
+  .wpcf7 {
+    scroll-margin-top: calc(3.75rem + 1.5625rem);
+  }
+}
+
+@media (min-width: 50rem) {
+  .wpcf7 {
+    scroll-margin-top: calc(4.6875rem + 1.5625rem);
+  }
+}
+
+.wpcf7 p {
+  margin: 0;
 }
