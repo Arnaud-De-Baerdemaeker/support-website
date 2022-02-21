@@ -1,5 +1,6 @@
 <?php
 $description = get_field("description");
+$introduction = get_field("introduction");
 $form = get_field("formulaire");
 ?>
 
@@ -9,6 +10,18 @@ $form = get_field("formulaire");
 	?>
 
 	<main>
+		<?php
+		if (!empty($introduction)):
+		?>
+			<h3 class="form-title">
+				<?php
+				echo $introduction;
+				?>
+			</h3>
+		<?php
+		endif;
+		?>
+
 		<?php
 		echo $form;
 		?>
