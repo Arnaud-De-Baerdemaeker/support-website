@@ -10,21 +10,22 @@ $form = get_field("formulaire");
 	?>
 
 	<main>
-		<?php
-		if (!empty($introduction)):
-		?>
-			<h3 class="form-title">
-				<?php
-				echo $introduction;
-				?>
-			</h3>
-		<?php
-		endif;
-		?>
+		<div class="form__container">
+			<?php
+			if (!empty($introduction)):
+			?>
+				<h3 class="form-title">
+					<?php
+					echo $introduction;
+					?>
+				</h3>
+			<?php
+			endif;
 
-		<?php
-		echo $form;
-		?>
+
+			echo $form;
+			?>
+		</div>
 	</main>
 
 	<?php
