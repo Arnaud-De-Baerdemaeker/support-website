@@ -11,9 +11,39 @@
 	.introduction { // <section>
 		display: flex;
 		justify-content: center;
-		column-gap: 300px;
 		position: relative;
 		width: 100%;
+		padding: {
+			right: 20px;
+			left: 20px;
+		}
+
+		@media #{$portrait} {
+			@media #{$mq_w600_up} {
+				padding: {
+					right: 10%;
+					left: 10%;
+				}
+			}
+		}
+
+		@media #{$landscape} {
+			//column-gap: 300px;
+		}
+
+		&__container { // <div>
+			display: flex;
+
+			@media #{$portrait} {
+				flex-direction: column;
+				justify-content: space-evenly;
+				max-width: 1080px;
+			}
+
+			@media #{$landscape} {
+				justify-content: space-evenly;
+			}
+		}
 
 		&__logo-link { // <a>
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -42,72 +72,82 @@
 			z-index: 0;
 
 			@media #{$portrait} {
-				width: 8.75rem;
-				height: 8.75rem;
+				width: 110px;
+				height: 110px;
+
+				@media #{$mq_w400_up} {
+					width: 140px;
+					height: 140px;
+				}
 
 				@media #{$mq_w500_up} {
-					width: 10rem;
-					height: 10rem;
+					width: 160px;
+					height: 160px;
 				}
 
 				@media #{$mq_w600_up} {
-					width: 12.5rem;
-					height: 12.5rem;
+					width: 180px;
+					height: 180px;
+				}
+
+				@media #{$mq_w700_up} {
+					width: 200px;
+					height: 200px;
 				}
 
 				@media #{$mq_w800_up} {
-					width: 13.75rem;
-					height: 13.75rem;
+					width: 220px;
+					height: 220px;
 				}
 
 				@media #{$mq_w900_up} {
-					width: 15.625rem;
-					height: 15.625rem;
+					width: 250px;
+					height: 250px;
 				}
 
 				@media #{$mq_w1000_up} {
-					width: 16.875rem;
-					height: 16.875rem;
+					width: 270px;
+					height: 270px;
 				}
 			}
 
 			@media #{$landscape} {
-				width: 6.25rem;
-				height: 6.25rem;
+				width: 100px;
+				height: 100px;
 
 				@media #{$mq_h400_up} {
-					width: 7.5rem;
-					height: 7.5rem;
+					width: 120px;
+					height: 120px;
 				}
 
 				@media #{$mq_h500_up} {
-					width: 9.375rem;
-					height: 9.375rem;
+					width: 140px;
+					height: 140px;
 				}
 
 				@media #{$mq_h600_up} {
-					width: 10.625rem;
-					height: 10.625rem;
+					width: 170px;
+					height: 170px;
 				}
 
 				@media #{$mq_h700_up} {
-					width: 11.875rem;
-					height: 11.875rem;
+					width: 190px;
+					height: 190px;
 				}
 
 				@media #{$mq_h800_up} {
-					width: 13.75rem;
-					height: 13.75rem;
+					width: 220px;
+					height: 220px;
 				}
 
 				@media #{$mq_h900_up} {
-					width: 15rem;
-					height: 15rem;
+					width: 260px;
+					height: 260px;
 				}
 
 				@media #{$mq_h1000_up} {
-					width: 16.25rem;
-					height: 16.25rem;
+					width: 280px;
+					height: 280px;
 				}
 			}
 		}
@@ -121,71 +161,208 @@
 		&__description {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			row-gap: 100px;
-			width: 40%;
+			justify-content: space-evenly;
 
-			p {
+			@media #{$portrait} {
+				row-gap: 20px;
+
+				@media #{$mq_w500_up} {
+					row-gap: 50px;
+				}
+
+				@media #{$mq_w700_up} {
+					row-gap: 70px;
+				}
+
+				@media #{$mq_w900_up} {
+					row-gap: 100px;
+				}
+			}
+
+			@media #{$landscape} {
+				width: 45%;
 				text-align: end;
+
+				@media #{$mq_h800_up} {
+					width: 40%;
+				}
+			}
+
+			h2 {
 				margin: 0;
 				color: $white;
 				font-weight: 100;
-				line-height: 60px;
 				z-index: 1;
 
-				@media #{$portrait} {
-					font-size: 1.375rem;
+				strong {
+					font-weight: 900;
+					text-transform: uppercase;
+				}
 
-					@media #{$mq_w400_up} {
-						font-size: 1.5rem;
+				&:first-of-type { // <h2>
+					@media #{$portrait} {
+						font-size: 18px;
+						line-height: 22px;
+						text-align: initial;
+
+						@media #{$mq_w400_up} {
+							font-size: 20px;
+							line-height: 24px;
+						}
+
+						@media #{$mq_w500_up} {
+							width: 75%;
+							font-size: 22px;
+							line-height: 26px;
+						}
+
+						@media #{$mq_w600_up} {
+							font-size: 24px;
+							line-height: 28px;
+						}
+
+						@media #{$mq_w700_up} {
+							font-size: 26px;
+							line-height: 30px;
+						}
+
+						@media #{$mq_w800_up} {
+							font-size: 28px;
+							line-height: 32px;
+						}
+
+						@media #{$mq_w900_up} {
+							font-size: 30px;
+							line-height: 34px;
+						}
+
+						@media #{$mq_w1000_up} {
+							font-size: 32px;
+							line-height: 36px;
+						}
 					}
 
-					@media #{$mq_w500_up} {
-						font-size: 1.8125rem;
-					}
+					@media #{$landscape} {
+						font-size: 18px;
+						line-height: 22px;
 
-					@media #{$mq_w600_up} {
-						font-size: 2.125rem;
-					}
+						@media #{$mq_h400_up} {
+							font-size: 20px;
+							line-height: 30px;
+						}
 
-					@media #{$mq_w700_up} {
-						font-size: 2.5rem;
-					}
+						@media #{$mq_h500_up} {
+							font-size: 24px;
+							line-height: 34px;
+						}
 
-					@media #{$mq_w800_up} {
-						font-size: 2.8125rem;
-					}
+						@media #{$mq_h600_up} {
+							font-size: 26px;
+							line-height: 36px;
+						}
 
-					@media #{$mq_w1000_up} {
-						font-size: 3.125rem;
+						@media #{$mq_h700_up} {
+							font-size: 30px;
+							line-height: 40px;
+						}
+
+						@media #{$mq_h800_up} {
+							font-size: 32px;
+							line-height: 42px;
+						}
+
+						@media #{$mq_h900_up} {
+							font-size: 44px;
+							line-height: 54px;
+						}
+
+						@media #{$mq_h1000_up} {
+							font-size: 46px;
+							line-height: 56px;
+						}
 					}
 				}
 
-				@media #{$landscape} {
-					font-size: 1.125rem;
+				&:last-of-type { // <h2>
+					@media #{$portrait} {
+						text-align: end;
+						font-size: 20px;
+						line-height: 26px;
 
-					@media #{$mq_h400_up} {
-						font-size: 1.375rem;
+						@media #{$mq_w400_up} {
+							font-size: 24px;
+							line-height: 30px;
+						}
+
+						@media #{$mq_w500_up} {
+							font-size: 28px;
+							line-height: 34px;
+						}
+
+						@media #{$mq_w600_up} {
+							font-size: 32px;
+							line-height: 38px;
+						}
+
+						@media #{$mq_w700_up} {
+							font-size: 36px;
+							line-height: 42px;
+						}
+
+						@media #{$mq_w800_up} {
+							font-size: 40px;
+							line-height: 46px;
+						}
+
+						@media #{$mq_w900_up} {
+							font-size: 44px;
+							line-height: 50px;
+						}
+
+						@media #{$mq_w1000_up} {
+							font-size: 48px;
+							line-height: 54px;
+						}
 					}
 
-					@media #{$mq_h500_up} {
-						font-size: 1.625rem;
-					}
+					@media #{$landscape} {
+						font-size: 22px;
+						line-height: 26px;
 
-					@media #{$mq_h600_up} {
-						font-size: 1.875rem;
-					}
+						@media #{$mq_h400_up} {
+							font-size: 24px;
+							line-height: 34px;
+						}
 
-					@media #{$mq_h700_up} {
-						font-size: 2.1875rem;
-					}
+						@media #{$mq_h500_up} {
+							font-size: 30px;
+							line-height: 40px;
+						}
 
-					@media #{$mq_h800_up} {
-						font-size: 2.8125rem;
-					}
+						@media #{$mq_h600_up} {
+							font-size: 34px;
+							line-height: 44px;
+						}
 
-					@media #{$mq_h1000_up} {
-						font-size: 3.125rem;
+						@media #{$mq_h700_up} {
+							font-size: 38px;
+							line-height: 48px;
+						}
+
+						@media #{$mq_h800_up} {
+							font-size: 42px;
+							line-height: 52px;
+						}
+
+						@media #{$mq_h900_up} {
+							font-size: 54px;
+							line-height: 64px;
+						}
+
+						@media #{$mq_h1000_up} {
+							font-size: 56px;
+							line-height: 66px;
+						}
 					}
 				}
 			}
@@ -195,74 +372,4 @@
 	.gradient { // <section>
 		background: linear-gradient(90deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%);
 	}
-}
-
-.introduction__logo-link--smaller {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.introduction__logo-container--smaller { // <h1>
-	background-color: $white;
-	margin: {
-		top: 0;
-		bottom: 0;
-	}
-	transform: rotate(45deg);
-	display: flex;
-	align-self: center;
-	align-items: center;
-	z-index: 0;
-	position: relative;
-
-	@media #{$portrait} {
-		width: 5.625rem;
-		height: 5.625rem;
-		top: 0.3125rem;
-		left: calc(100% / 2 - 5.625rem / 2);
-
-		@media #{$mq_w600_up} {
-			width: 6.25rem;
-			height: 6.25rem;
-			top: 0.625rem;
-			left: calc(100% / 2 - 6.25rem / 2);
-		}
-
-		@media #{$mq_w800_up} {
-			width: 8.125rem;
-			height: 8.125rem;
-			top: 2.3125rem;
-			left: calc(100% / 2 - 8.125rem / 2);
-		}
-	}
-
-	@media #{$landscape} {
-		width: 5.625rem;
-		height: 5.625rem;
-		top: -0.3125rem;
-		left: calc(100% / 2 - 5.625rem / 2);
-
-		@media #{$mq_h400_up} {
-			top: 0.3125rem;
-		}
-
-		@media #{$mq_h600_up} {
-			width: 6.875rem;
-			height: 6.875rem;
-			top: 1.875rem;
-			left: calc(100% / 2 - 6.875rem / 2);
-		}
-
-		@media #{$mq_h900_up} {
-			width: 8.125rem;
-			height: 8.125rem;
-			top: 2.3125rem;
-			left: calc(100% / 2 - 8.125rem / 2);
-		}
-	}
-}
-
-.introduction__logo-image--smaller { // <img>
-	vertical-align: middle;
-	width: 100%;
-	transform: rotate(-45deg);
 }
