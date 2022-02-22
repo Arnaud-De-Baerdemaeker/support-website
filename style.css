@@ -34,6 +34,12 @@ body {
 }
 
 body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #dbdbdb;
 }
 
@@ -55,10 +61,44 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 300px;
-          column-gap: 300px;
   position: relative;
   width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero .introduction {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+.hero .introduction__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (orientation: portrait) {
+  .hero .introduction__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    max-width: 1080px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero .introduction__container {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .hero .introduction__logo-link {
@@ -102,99 +142,113 @@ body main {
 
 @media (orientation: portrait) {
   .hero .introduction__logo-container {
-    width: 8.75rem;
-    height: 8.75rem;
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .hero .introduction__logo-container {
+    width: 140px;
+    height: 140px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
   .hero .introduction__logo-container {
-    width: 10rem;
-    height: 10rem;
+    width: 160px;
+    height: 160px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
   .hero .introduction__logo-container {
-    width: 12.5rem;
-    height: 12.5rem;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .hero .introduction__logo-container {
+    width: 200px;
+    height: 200px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
   .hero .introduction__logo-container {
-    width: 13.75rem;
-    height: 13.75rem;
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
   .hero .introduction__logo-container {
-    width: 15.625rem;
-    height: 15.625rem;
+    width: 250px;
+    height: 250px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
   .hero .introduction__logo-container {
-    width: 16.875rem;
-    height: 16.875rem;
+    width: 270px;
+    height: 270px;
   }
 }
 
 @media (orientation: landscape) {
   .hero .introduction__logo-container {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 100px;
+    height: 100px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 25rem) {
   .hero .introduction__logo-container {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 120px;
+    height: 120px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 31.25rem) {
   .hero .introduction__logo-container {
-    width: 9.375rem;
-    height: 9.375rem;
+    width: 140px;
+    height: 140px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 37.5rem) {
   .hero .introduction__logo-container {
-    width: 10.625rem;
-    height: 10.625rem;
+    width: 170px;
+    height: 170px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 43.75rem) {
   .hero .introduction__logo-container {
-    width: 11.875rem;
-    height: 11.875rem;
+    width: 190px;
+    height: 190px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 50rem) {
   .hero .introduction__logo-container {
-    width: 13.75rem;
-    height: 13.75rem;
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 56.25rem) {
   .hero .introduction__logo-container {
-    width: 15rem;
-    height: 15rem;
+    width: 260px;
+    height: 260px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 62.5rem) {
   .hero .introduction__logo-container {
-    width: 16.25rem;
-    height: 16.25rem;
+    width: 280px;
+    height: 280px;
   }
 }
 
@@ -213,198 +267,290 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  row-gap: 100px;
-  width: 40%;
-}
-
-.hero .introduction__description p {
-  text-align: end;
-  margin: 0;
-  color: white;
-  font-weight: 100;
-  line-height: 60px;
-  z-index: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 @media (orientation: portrait) {
-  .hero .introduction__description p {
-    font-size: 1.375rem;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 25rem) {
-  .hero .introduction__description p {
-    font-size: 1.5rem;
+  .hero .introduction__description {
+    row-gap: 20px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
-  .hero .introduction__description p {
-    font-size: 1.8125rem;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 37.5rem) {
-  .hero .introduction__description p {
-    font-size: 2.125rem;
+  .hero .introduction__description {
+    row-gap: 50px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
-  .hero .introduction__description p {
-    font-size: 2.5rem;
+  .hero .introduction__description {
+    row-gap: 70px;
   }
 }
 
-@media (orientation: portrait) and (min-width: 50rem) {
-  .hero .introduction__description p {
-    font-size: 2.8125rem;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 62.5rem) {
-  .hero .introduction__description p {
-    font-size: 3.125rem;
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .hero .introduction__description {
+    row-gap: 100px;
   }
 }
 
 @media (orientation: landscape) {
-  .hero .introduction__description p {
-    font-size: 1.125rem;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 25rem) {
-  .hero .introduction__description p {
-    font-size: 1.375rem;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 31.25rem) {
-  .hero .introduction__description p {
-    font-size: 1.625rem;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 37.5rem) {
-  .hero .introduction__description p {
-    font-size: 1.875rem;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 43.75rem) {
-  .hero .introduction__description p {
-    font-size: 2.1875rem;
+  .hero .introduction__description {
+    width: 45%;
+    text-align: end;
   }
 }
 
 @media (orientation: landscape) and (min-height: 50rem) {
-  .hero .introduction__description p {
-    font-size: 2.8125rem;
+  .hero .introduction__description {
+    width: 40%;
+  }
+}
+
+.hero .introduction__description h2 {
+  margin: 0;
+  color: white;
+  font-weight: 100;
+  z-index: 1;
+}
+
+.hero .introduction__description h2 strong {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (orientation: portrait) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: initial;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .hero .introduction__description h2:first-of-type {
+    width: 75%;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .hero .introduction__description h2:first-of-type {
+    font-size: 44px;
+    line-height: 54px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 62.5rem) {
-  .hero .introduction__description p {
-    font-size: 3.125rem;
+  .hero .introduction__description h2:first-of-type {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media (orientation: portrait) {
+  .hero .introduction__description h2:last-of-type {
+    text-align: end;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 38px;
+    line-height: 48px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 54px;
+    line-height: 64px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .hero .introduction__description h2:last-of-type {
+    font-size: 56px;
+    line-height: 66px;
   }
 }
 
 .hero .gradient {
   background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%);
-}
-
-.introduction__logo-link--smaller {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.introduction__logo-container--smaller {
-  background-color: white;
-  margin-top: 0;
-  margin-bottom: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 0;
-  position: relative;
-}
-
-@media (orientation: portrait) {
-  .introduction__logo-container--smaller {
-    width: 5.625rem;
-    height: 5.625rem;
-    top: 0.3125rem;
-    left: calc(100% / 2 - 5.625rem / 2);
-  }
-}
-
-@media (orientation: portrait) and (min-width: 37.5rem) {
-  .introduction__logo-container--smaller {
-    width: 6.25rem;
-    height: 6.25rem;
-    top: 0.625rem;
-    left: calc(100% / 2 - 6.25rem / 2);
-  }
-}
-
-@media (orientation: portrait) and (min-width: 50rem) {
-  .introduction__logo-container--smaller {
-    width: 8.125rem;
-    height: 8.125rem;
-    top: 2.3125rem;
-    left: calc(100% / 2 - 8.125rem / 2);
-  }
-}
-
-@media (orientation: landscape) {
-  .introduction__logo-container--smaller {
-    width: 5.625rem;
-    height: 5.625rem;
-    top: -0.3125rem;
-    left: calc(100% / 2 - 5.625rem / 2);
-  }
-}
-
-@media (orientation: landscape) and (min-height: 25rem) {
-  .introduction__logo-container--smaller {
-    top: 0.3125rem;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 37.5rem) {
-  .introduction__logo-container--smaller {
-    width: 6.875rem;
-    height: 6.875rem;
-    top: 1.875rem;
-    left: calc(100% / 2 - 6.875rem / 2);
-  }
-}
-
-@media (orientation: landscape) and (min-height: 56.25rem) {
-  .introduction__logo-container--smaller {
-    width: 8.125rem;
-    height: 8.125rem;
-    top: 2.3125rem;
-    left: calc(100% / 2 - 8.125rem / 2);
-  }
-}
-
-.introduction__logo-image--smaller {
-  vertical-align: middle;
-  width: 100%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .footer {
@@ -556,26 +702,240 @@ body main {
   }
 }
 
-.wpcf7 {
-  max-width: 120rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 9.375rem;
-  scroll-margin-top: calc(3.125rem + 1.5625rem);
+.form__container {
+  padding-top: 75px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-@media (min-width: 28.125rem) {
-  .wpcf7 {
-    scroll-margin-top: calc(3.75rem + 1.5625rem);
+@media (orientation: portrait) {
+  .form__container {
+    max-width: 1080px;
   }
 }
 
-@media (min-width: 50rem) {
-  .wpcf7 {
-    scroll-margin-top: calc(4.6875rem + 1.5625rem);
+@media (orientation: landscape) {
+  .form__container {
+    max-width: 1920px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .form__container {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .form__container {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .form__container {
+    padding-right: 12%;
+    padding-left: 12%;
+  }
+}
+
+.form-title {
+  margin: 0;
+  text-align: center;
+}
+
+@media (orientation: portrait) {
+  .form-title {
+    font-size: 20px;
+    max-width: 1080px;
+  }
+}
+
+.wpcf7 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 75px;
+  padding-bottom: 150px;
+}
+
+.wpcf7-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0rem 1.25rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0rem 0rem 1.25rem rgba(0, 0, 0, 0.4);
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .wpcf7-form {
+    padding: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .wpcf7-form {
+    padding: 40px;
   }
 }
 
 .wpcf7 p {
   margin: 0;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="number"], .wpcf7 textarea, .wpcf7 input[type="date"] {
+  width: 100%;
+  margin: 0;
+  padding-top: 0;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  background-color: unset;
+  outline: none;
+  font-size: 20px;
+}
+
+.wpcf7 input[type="file"] {
+  width: 100%;
+}
+
+.wpcf7 input[type="submit"] {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+
+.wpcf7 .form__business, .wpcf7 .form__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wpcf7 .form__names, .wpcf7 .form__request, .wpcf7 .form__others {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  row-gap: 20px;
+}
+
+@media (orientation: portrait) {
+  .wpcf7 .form__names, .wpcf7 .form__request, .wpcf7 .form__others {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .wpcf7 .form__names, .wpcf7 .form__request, .wpcf7 .form__others {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+  }
+}
+
+@media (orientation: landscape) {
+  .wpcf7 .form__names, .wpcf7 .form__request, .wpcf7 .form__others {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .wpcf7 .form__names, .wpcf7 .form__request, .wpcf7 .form__others {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+  }
+}
+
+.wpcf7 .form__name, .wpcf7 .form__firstname, .wpcf7 .form__website, .wpcf7 .form__object, .wpcf7 .form__deadline, .wpcf7 .form__attachments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wpcf7 .form__submit {
+  position: relative;
+}
+
+.wpcf7 .form__submit input[type="submit"] {
+  display: block;
+  height: 3.125rem;
+  font-family: "Catamaran", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3e8c74;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: #3e8c74;
+  cursor: pointer;
+  letter-spacing: 0.0625rem;
+  background-color: unset;
+  -webkit-transition-property: background-color color;
+  transition-property: background-color color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  margin-top: 2rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.wpcf7 .form__submit input[type="submit"]:hover {
+  background-color: #3e8c74;
+  color: white;
+}
+
+.wpcf7 .form__submit .wpcf7-spinner {
+  position: absolute;
+  top: calc(50px - (24px + 12px));
+  right: calc(50% + 20px);
+  margin: 0;
+}
+
+@media (min-width: 87.5rem) {
+  .wpcf7 .form__submit .wpcf7-spinner {
+    top: calc((50px + 2rem) - (24px + 12px));
+  }
 }
