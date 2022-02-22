@@ -1,21 +1,201 @@
+.form {
+	&__container { // <div>
+		padding: {
+			top: 75px;
+			right: 20px;
+			left: 20px;
+		}
+
+		@media #{$portrait} {
+			max-width: 1080px;
+		}
+
+		@media #{$landscape} {
+			max-width: 1920px;
+
+			@media #{$mq_h500_up} {
+				padding: {
+					right: 7%;
+					left: 7%;
+				}
+			}
+
+			@media #{$mq_h600_up} {
+				padding: {
+					right: 10%;
+					left: 10%;
+				}
+			}
+
+			@media #{$mq_h800_up} {
+				padding: {
+					right: 12%;
+					left: 12%;
+				}
+			}
+		}
+	}
+
+	&-title { // <h3>
+		margin: 0;
+		text-align: center;
+
+		@media #{$portrait} {
+			font-size: 20px;
+			max-width: 1080px;
+		}
+	}
+}
+
 .wpcf7 { // <div>
-    max-width: 120rem;
-	margin: {
-		right: auto;
-		left: auto;
-	}
-	padding-bottom: 9.375rem;
-	scroll-margin-top: calc(3.125rem + 1.5625rem);
-
-	@media #{$mq_w450_up} {
-		scroll-margin-top: calc(3.75rem + 1.5625rem);
+	display: flex;
+	justify-content: center;
+	padding: {
+		top: 75px;
+		bottom: 150px;
 	}
 
-	@media #{$mq_w800_up} {
-		scroll-margin-top: calc(4.6875rem + 1.5625rem);
+	&-form { // <form>
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		width: 100%;
+		max-width: 800px;
+		padding: 20px;
+		background-color: $white;
+		box-shadow: 0rem 0rem 1.25rem $black_shadow;
+
+		@media #{$portrait} {
+			@media #{$mq_w600_up} {
+				padding: 40px;
+			}
+		}
+
+		@media #{$landscape} {
+			@media #{$mq_h500_up} {
+				padding: 40px;
+			}
+		}
 	}
 
     p {
         margin: 0;
     }
+
+	input[type="text"], input[type="number"], textarea, input[type="date"] {
+		width: 100%;
+		margin: 0;
+		padding: {
+			top: 0;
+			right: 5px;
+			bottom: 5px;
+			left: 5px;
+		}
+		border: none;
+		border-bottom: {
+			style: solid;
+			width: 1px;
+			color: $black;
+		};
+		background-color: unset;
+		outline: none;
+		font-size: 20px;
+	}
+
+	input[type="file"] {
+		width: 100%;
+	}
+
+	input[type="submit"]{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background-color: unset;
+	}
+
+	.form {
+		&__business, &__message { // <div>
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__names, &__request, &__others { // <div>
+			display: flex;
+			row-gap: 20px;
+
+			@media #{$portrait} {
+				flex-direction: column;
+
+				@media #{$mq_w800_up} {
+					flex-direction: row;
+					column-gap: 50px;
+				}
+			}
+
+			@media #{$landscape} {
+				flex-direction: column;
+
+				@media #{$mq_h700_up} {
+					flex-direction: row;
+					column-gap: 50px;
+				}
+			}
+		}
+
+		&__name, &__firstname, &__website, &__object, &__deadline, &__attachments { // <div>
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__submit { // <div>
+			position: relative;
+
+			input[type="submit"] {
+				display: block;
+				height: 3.125rem;
+				font: {
+					family: "Catamaran", Arial, "Helvetica Neue", Helvetica, sans-serif;
+					size: 1rem;
+					weight: 700;
+				}
+				color: $wooops;
+				border: {
+					style: solid;
+					width: 0.0625rem;
+					color: $wooops;
+				}
+				cursor: pointer;
+				letter-spacing: 0.0625rem;
+				background-color: unset;
+				transition-property: background-color color;
+				transition-duration: 0.3s;
+				margin: {
+					top: 2rem;
+					right: 0;
+					bottom: 0;
+					left: auto;
+				}
+				padding: 0;
+				text-transform: uppercase;
+				width: 50%;
+
+				&:hover {
+					background-color: $wooops;
+					color: $white;
+				}
+			}
+
+			.wpcf7-spinner { // <span>
+				position: absolute;
+				top: calc(50px - (24px + 12px));
+				right: calc(50% + 20px);
+				margin: 0;
+
+				@media #{$mq_w1400_up} {
+					top: calc((50px + 2rem) - (24px + 12px));
+				}
+			}
+		}
+	}
 }
