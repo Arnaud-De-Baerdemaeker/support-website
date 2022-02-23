@@ -71,15 +71,41 @@
 		width: 15.625rem;
 	}
 
+	&__entry-list { // <ul>
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
 	&__title { // <h4>
 		margin: 0;
 		font-size: 0.875rem;
 		color: $neutral_180;
 	}
 
-	&__entry { // <p>
+	&__entry-item { // <li>
 		margin: 0;
 		font-size: 1rem;
+	}
+
+	&__network-list { // <ul>
+		@extend .footer__entry-list;
+		display: flex;
+		column-gap: 10px;
+		justify-content: center;
+	}
+
+	&__network-item { // <li>
+		width: 30px;
+	}
+
+	&__network-url { // <a>
+		display: block;
+	}
+
+	&__network-icon { // <img>
+		width: 100%;
+		vertical-align: middle;
 	}
 
 	&__copyright { // <div>
